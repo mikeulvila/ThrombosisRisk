@@ -1,9 +1,19 @@
 <ion-view view-title="Account">
   <ion-content>
     <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
+      <div class="item item-divider">
+        Test
+      </div>
+
+      <ion-toggle ng-repeat="item in riskOnePoint"
+                  ng-model="item.answer"
+                  ng-checked="item.answer">
+        {{ item.question }}
+      </ion-toggle>
+
+      <div class="item">
+        <pre ng-bind="riskOnePoint | json"></pre>
+      </div>
     </ion-list>
   </ion-content>
 </ion-view>

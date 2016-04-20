@@ -22,7 +22,27 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AccountCtrl', function($scope) {
+
+  $scope.riskOnePoint = [
+    { question: "Age 41-60 years", answer: false },
+    { question: "Minor surgery planned", answer: false },
+    { question: "History of prior major surgery (< 1 month)", answer: false },
+    { question: "Vericose veins", answer: false },
+    { question: "History of inflammatory bowel disease", answer: false },
+    { question: "Swollen legs (current)", answer: false },
+    { question: "Obesity (BMI > 25)", answer: false },
+    { question: "Acute myocardial infarction", answer: false },
+    { question: "Congestive heart failure (< 1 month)", answer: false },
+    { question: "Sepsis (< 1 month)", answer: false },
+    { question: "Serious lung disease incl. pneumonia (< 1 month)", answer: false },
+    { question: "Abnormal pulmonary function (COPD)", answer: false },
+    { question: "Medical patient currently at bed rest", answer: false },
+    { question: "Other risk factors", answer: false }
+  ];
+
   $scope.settings = {
     enableFriends: true
   };
+
+
 });
