@@ -5,11 +5,11 @@
         Test
       </div>
 
-      <ion-checkbox ng-repeat="item in riskOnePoint"
+      <ion-checkboxs ng-repeat="item in riskOnePoint"
                   ng-model="item.answer"
                   ng-checked="item.answer">
         {{ item.question }}
-      </ion-checkbox>
+      </ion-checkboxs>
 
       <div class="item">
         <pre ng-bind="riskOnePoint | json"></pre>
