@@ -1,9 +1,5 @@
 angular.module('starter.controllers', [])
 
-.controller('TabCtrl', function ($scope) {
-   $scope.title = 'Tab Control'
-})
-
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
