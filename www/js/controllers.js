@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ui.bootstrap'])
 
 .controller('DashCtrl', function($scope) {})
 
