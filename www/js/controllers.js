@@ -23,6 +23,9 @@ angular.module('starter.controllers', ['ui.bootstrap'])
 
 .controller('AccountCtrl', function($scope) {
 
+  $scope.max = 100;
+  $scope.dynamic = 50;
+
   $scope.riskOnePoint = [
     { question: "Age 41-60 years", answer: false },
     { question: "Minor surgery planned", answer: false },
