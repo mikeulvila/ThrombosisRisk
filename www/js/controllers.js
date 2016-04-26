@@ -23,29 +23,30 @@ angular.module('starter.controllers', ['ui.bootstrap'])
 
 .controller('AccountCtrl', function($scope) {
 
-  $scope.max = 100;
-  $scope.dynamic = 50;
+  $scope.max = 5;
+  $scope.dynamic = 0;
 
   $scope.riskOnePoint = [
-    { question: "Age 41-60 years", answer: false },
-    { question: "Minor surgery planned", answer: false },
-    { question: "History of prior major surgery (< 1 month)", answer: false },
-    { question: "Vericose veins", answer: false },
-    { question: "History of inflammatory bowel disease", answer: false },
-    { question: "Swollen legs (current)", answer: false },
-    { question: "Obesity (BMI > 25)", answer: false },
-    { question: "Acute myocardial infarction", answer: false },
-    { question: "Congestive heart failure (< 1 month)", answer: false },
-    { question: "Sepsis (< 1 month)", answer: false },
-    { question: "Serious lung disease incl. pneumonia (< 1 month)", answer: false },
-    { question: "Abnormal pulmonary function (COPD)", answer: false },
-    { question: "Medical patient currently at bed rest", answer: false },
-    { question: "Other risk factors", answer: false }
+    { question: "Age 41-60 years", answer: 0 },
+    { question: "Minor surgery planned", answer: 0 },
+    { question: "History of prior major surgery (< 1 month)", answer: 0 },
+    { question: "Vericose veins", answer: 0 },
+    { question: "History of inflammatory bowel disease", answer: 0 },
+    { question: "Swollen legs (current)", answer: 0 },
+    { question: "Obesity (BMI > 25)", answer: 0 },
+    { question: "Acute myocardial infarction", answer: 0 },
+    { question: "Congestive heart failure (< 1 month)", answer: 0 },
+    { question: "Sepsis (< 1 month)", answer: 0 },
+    { question: "Serious lung disease incl. pneumonia (< 1 month)", answer: 0 },
+    { question: "Abnormal pulmonary function (COPD)", answer: 0 },
+    { question: "Medical patient currently at bed rest", answer: 0 },
+    { question: "Other risk factors", answer: 0 }
   ];
 
-  $scope.settings = {
-    enableFriends: true
-  };
+  $scope.setValue = function () {
+    $scope.dynamic = $scope.riskOnePoint
+  }
+
 
 
 });

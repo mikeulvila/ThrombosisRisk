@@ -12,7 +12,9 @@
 
       <ion-checkbox ng-repeat="item in riskOnePoint"
                   ng-model="item.answer"
-                  ng-checked="item.answer">
+                  ng-checked="item.answer"
+                  ng-true-value="1"
+                  ng-false-value="0">
         {{ item.question }}
       </ion-checkbox>
 
