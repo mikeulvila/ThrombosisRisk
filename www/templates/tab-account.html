@@ -1,7 +1,7 @@
 <ion-view view-title="Account">
   <ion-content>
-    <uib-progressbar max="max" value="dynamic">
-      <span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span>
+    <uib-progressbar max="max" value="dynamic" type="{{type}}">
+      <span style="color:black; white-space:nowrap;">Score: {{dynamic}}, {{riskLevel}}</span>
     </uib-progressbar>
 
     <ion-list>
@@ -14,7 +14,7 @@
                   ng-model="item.answer"
                   ng-checked="item.answer"
                   ng-true-value="1"
-                  ng-false-value="-1"
+                  ng-false-value="0"
                   ng-change="setValue()">
         {{ item.question }}
       </ion-checkbox>

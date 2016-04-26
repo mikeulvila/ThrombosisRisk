@@ -44,11 +44,28 @@ angular.module('starter.controllers', ['ui.bootstrap'])
   ];
 
   $scope.setValue = function () {
-    $scope.dynamic = 0;
+    var riskScore = 0;
     angular.forEach($scope.riskOnePoint, function(value, key) {
-      $scope.dynamic += value.answer;
+      riskScore += value.answer;
     });
-  }
+
+    $scope.dynamic = riskScore;
+
+    if (riskScore <= 1) {
+      $scope.riskLevel = "Low Risk";
+      $scope.type = "success";
+    } else if (riskScore === 2) {
+      $scope.riskLevel = "Moderate Risk";
+      $scope.type = "warning";
+    } else if (riskScore >= 3 && riskScore <= 4) {
+      $scope.riskLevel = "High Risk";
+      $scope.type = "danger";
+    } else if (riskScore >= 5) {
+      $scope.riskLevel = "Highest Risk";
+      $scope.type = "danger";
+    }
+
+  };
 
 
 
