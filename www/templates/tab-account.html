@@ -14,7 +14,8 @@
                   ng-model="item.answer"
                   ng-checked="item.answer"
                   ng-true-value="1"
-                  ng-false-value="0">
+                  ng-false-value="-1"
+                  ng-change="setValue()">
         {{ item.question }}
       </ion-checkbox>
 

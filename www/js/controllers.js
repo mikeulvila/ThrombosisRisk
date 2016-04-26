@@ -44,7 +44,10 @@ angular.module('starter.controllers', ['ui.bootstrap'])
   ];
 
   $scope.setValue = function () {
-    $scope.dynamic = $scope.riskOnePoint
+    $scope.dynamic = 0;
+    angular.forEach($scope.riskOnePoint, function(value, key) {
+      $scope.dynamic += value.answer;
+    });
   }
 
 
